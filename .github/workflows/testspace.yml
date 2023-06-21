@@ -1,0 +1,63 @@
+name: Testspace
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Function name'
+        required: false
+      payload:
+        description: 'Function input-payload'
+        required: false
+      context:
+        description: 'Function execution-context'
+        required: false
+env:
+  IN_NAME: ${{ github.event.inputs.name }}
+  IN_PAYLOAD: ${{ github.event.inputs.payload }}
+  IN_CONTEXT: ${{ github.event.inputs.context }}
+  GITHUB_CONTEXT: ${{ toJson(github) }}
+jobs:
+  before:
+    if: contains(github.event.inputs.context, '"type":"before"')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo GitHub Context
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Call handler
+        run: node ./.github/workflows/handler.js
+  after:
+    if: contains(github.event.inputs.context, '"type":"after"')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo GitHub Context
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Call handler
+        run: node ./.github/workflows/handler.js
+  runtime_error:
+    if: github.event.inputs.name == 'runtime_error'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Call handler
+        run: node ./.github/workflows/runtime_error.js
+  sleep:
+    if: github.event.inputs.name == 'sleep'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Call handler
+        run: node ./.github/workflows/sleep.js
