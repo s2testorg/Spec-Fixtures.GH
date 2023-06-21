@@ -1,0 +1,189 @@
+{
+    "field1": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+    },
+    "field2": ["a", "b", "c"],
+    "field3": "last field",
+    "SPEC-INPUT-EXAMPLE": {  
+        "repo": { 
+            "org": "s2testorg",
+            "name": "sessionResults",
+            "templateOrg": "s2technologies",
+            "templateOrgRepo": "testspace.test.repo",
+            "templateOrgRepoBranch": "master",
+            "issues": [],
+            "cycles": []
+        },
+        "project": {
+            "org": "s2testorg",
+            "user": "testuser",
+            "pass": "testuser"
+        },
+        "sessions": [
+            {
+                "listing": "All Tests",
+                "name": "ONE.01",
+                "suites": [
+                    {
+                        "name": "ONE",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "listing": "All Tests",
+                "name": "ONE.02",
+                "suites": [
+                    {
+                        "name": "ONE",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "listing": "All Tests",
+                "name": "TWO.01",
+                "suites": [
+                    {
+                        "name": "TWO",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "listing": "All Tests",
+                "name": "TWO.02",
+                "suites": [
+                    {
+                        "name": "TWO",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "listing": "All Tests",
+                "name": "THREE.01",
+                "suites": [
+                    {
+                        "name": "THREE",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "listing": "All Tests",
+                "name": "THREE.02",
+                "suites": [
+                    {
+                        "name": "THREE",
+                        "cases": [
+                            {
+                                "name": "Passed",
+                                "status": "Passed"
+                            },
+                            {
+                                "name": "Failed",
+                                "status": "Failed"
+                            },
+                            {
+                                "name": "Blocked",
+                                "status": "Blocked"
+                            },
+                            {
+                                "name": "Not Applicable",
+                                "status": "Not Applicable"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
